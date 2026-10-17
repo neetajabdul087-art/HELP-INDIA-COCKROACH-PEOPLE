@@ -1,0 +1,19 @@
+{
+  "name": "Help India — Cockroach People",
+  "short_name": "Help India",
+  "description": "Community, helping people, community rules and rights information.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f6f7f2",
+  "theme_color": "#123d2a",
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

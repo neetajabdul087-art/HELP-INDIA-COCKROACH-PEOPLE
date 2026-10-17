@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<rect width="512" height="512" rx="112" fill="#123d2a"/>
+<circle cx="256" cy="220" r="132" fill="#f39b35"/>
+<path d="M256 100 L292 190 L390 196 L314 258 L338 350 L256 300 L174 350 L198 258 L122 196 L220 190 Z" fill="#fff7e8"/>
+<text x="256" y="435" font-size="54" font-family="Arial,sans-serif" font-weight="700" fill="#ffffff" text-anchor="middle">HELP INDIA</text>
+</svg>

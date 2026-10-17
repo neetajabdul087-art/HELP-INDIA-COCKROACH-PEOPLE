@@ -1,0 +1,35 @@
+HELP INDIA — COCKROACH PEOPLE
+Founder: A.J Abdul Ansari
+Version: Public-launch package (PWA-ready static website)
+
+WHAT IS READY
+- Mobile-friendly website and app icon
+- Community, starter rules, demo voting, help requests, problem reports, rights-information page, profile
+- PWA manifest and service worker
+- GitHub Pages deployment workflow included
+
+IMPORTANT — READ BEFORE LAUNCH
+This is a static demo website, NOT a full production community service.
+- No real phone OTP login
+- No shared online database or cross-device accounts
+- Voting, help requests, rule proposals and reports are local demo data only
+- Reports are not sent to authorities
+- Do not ask visitors to submit phone numbers, addresses, passwords, identity documents, or sensitive information
+- Community moderation and privacy/contact policies should be finalized before inviting the public
+- Community rules do not replace Indian law
+
+PUBLISH FROM ANDROID (GITHUB PAGES)
+1. Sign up / sign in at https://github.com/ . Do not share your password or OTP with anyone.
+2. Create a new repository named: help-india-cockroach-people
+3. Set it to Public. Do not add a README/license during creation if you plan to upload these files directly.
+4. Download and extract this ZIP on your phone.
+5. Open the new repository in Chrome. Choose Add file > Upload files.
+6. Upload the CONTENTS of this folder (not the outer folder itself), including index.html, manifest.webmanifest, service-worker.js, icon.svg, .nojekyll, and the .github folder.
+   If the phone's upload picker hides dot-files, upload the visible site files first; the website can still publish, but automatic workflow deployment needs .github/workflows/pages.yml.
+7. Commit the uploaded files to the main branch.
+8. Open the repository's Settings > Pages. Under Build and deployment, choose "GitHub Actions" if the workflow is present. If not, choose "Deploy from a branch", select main and /(root), then Save.
+9. If using the included workflow, open Actions and wait for "Deploy Help India website" to finish successfully.
+10. The Pages URL will look like https://YOUR-USERNAME.github.io/help-india-cockroach-people/ . Replace YOUR-USERNAME with your GitHub username. The real URL cannot be known until you create the account/repository.
+
+NEXT PHASE FOR REAL COMMUNITY FEATURES
+To add real OTP login and shared data, a backend such as Supabase/Firebase must be configured with security rules, privacy notice, abuse reporting, and moderator permissions. Never put private service keys in frontend code. That requires account setup and your explicit configuration.

@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#123d2a">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<title>Help India — Cockroach People</title>
+<style>
+:root{--green:#123d2a;--green2:#1d6b46;--orange:#f39b35;--cream:#f6f7f2;--ink:#1b2922;--muted:#68756d;--card:#fff;--line:#e3e9e2}
+*{box-sizing:border-box}body{margin:0;background:var(--cream);font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink)}button,input,textarea,select{font:inherit}button{cursor:pointer}
+header{background:linear-gradient(130deg,var(--green),#236344);color:#fff;padding:20px 18px 18px;border-radius:0 0 24px 24px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px}.brand{font-size:12px;letter-spacing:1.3px;opacity:.85;font-weight:800}.badge{font-size:11px;background:#ffffff22;border:1px solid #ffffff55;border-radius:99px;padding:6px 9px}
+h1{font-size:24px;line-height:1.15;margin:12px 0 7px}.subtitle{font-size:13px;line-height:1.5;opacity:.9;max-width:540px;margin:0}
+main{max-width:720px;margin:auto;padding:16px 14px 90px}.section-title{font-size:17px;margin:18px 2px 10px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.tile,.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:15px;box-shadow:0 3px 12px #102a1510}.tile{min-height:112px;text-align:left;color:var(--ink)}.tile .emoji{font-size:25px;display:block;margin-bottom:8px}.tile strong{display:block;font-size:14px}.tile small{display:block;color:var(--muted);font-size:12px;margin-top:4px;line-height:1.4}.tile:active,.btn:active{transform:scale(.99)}
+.notice{background:#fff7e8;border:1px solid #f4d8a5;padding:12px 14px;border-radius:13px;font-size:12px;line-height:1.5;margin-top:14px}
+.page{display:none}.page.active{display:block}.back{border:0;background:#e6eee8;color:var(--green);padding:8px 12px;border-radius:10px;font-weight:700;margin-bottom:12px}
+.card{margin-bottom:10px}.card h3{font-size:15px;margin:0 0 7px}.muted{color:var(--muted);font-size:13px;line-height:1.5}.pill{display:inline-block;font-size:11px;border-radius:99px;padding:5px 8px;background:#e7f3ea;color:#24623f;font-weight:700;margin:2px 4px 2px 0}
+.btn{border:0;border-radius:11px;background:var(--green2);color:#fff;font-weight:750;padding:11px 14px;margin-top:9px}.btn.secondary{background:#e8efe9;color:var(--green)}.btn.orange{background:var(--orange);color:#2b2418}.btn.danger{background:#9e3434}
+.field{display:block;width:100%;border:1px solid #d5ded6;background:#fff;border-radius:10px;padding:11px;margin:8px 0 12px}.label{font-size:12px;font-weight:750;display:block;margin-top:10px}
+textarea.field{min-height:90px;resize:vertical}.row{display:flex;gap:8px;flex-wrap:wrap}.row>*{flex:1;min-width:120px}
+nav{position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid var(--line);display:flex;justify-content:space-around;padding:9px 4px calc(9px + env(safe-area-inset-bottom));z-index:3}nav button{border:0;background:none;color:var(--muted);font-size:11px;font-weight:700;padding:4px}nav span{display:block;font-size:20px;margin-bottom:2px}
+footer{text-align:center;color:var(--muted);font-size:11px;padding:10px 0 20px}.empty{padding:16px;text-align:center;color:var(--muted);font-size:13px}
+@media(min-width:600px){h1{font-size:30px}.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+</style>
+</head>
+<body>
+<header>
+ <div class="top"><div class="brand">🇮🇳 COMMUNITY • HELP • RIGHTS</div><div class="badge">PWA Prototype v2</div></div>
+ <h1>HELP INDIA<br>COCKROACH PEOPLE</h1>
+ <p class="subtitle">Saath milkar seekhein, apni baat rakhein aur ek-doosre ki madad karein.</p>
+</header>
+<main>
+<section id="home" class="page active">
+ <h2 class="section-title">Namaste! Welcome to our community</h2>
+ <div class="card"><h3>Hamari soch</h3><p class="muted">Har insaan ko izzat, jaankari aur apni baat rakhne ka mauka milna chahiye. Community ke rules sabhi ke sujhav se behtar ban sakte hain.</p><span class="pill">Respect</span><span class="pill">Help</span><span class="pill">Learning</span></div>
+ <h2 class="section-title">Kya karna chahte hain?</h2>
+ <div class="grid">
+  <button class="tile" onclick="showPage('community')"><span class="emoji">👥</span><strong>Community</strong><small>Community ka parichay aur membership idea</small></button>
+  <button class="tile" onclick="showPage('rules')"><span class="emoji">📜</span><strong>Our Rules</strong><small>Niyam padhein aur sujhav dein</small></button>
+  <button class="tile" onclick="showPage('voting')"><span class="emoji">🗳️</span><strong>Voting</strong><small>Demo proposal par apni pasand chunein</small></button>
+  <button class="tile" onclick="showPage('help')"><span class="emoji">🤝</span><strong>Help People</strong><small>Madad ki request ka demo</small></button>
+  <button class="tile" onclick="showPage('report')"><span class="emoji">📢</span><strong>Report Problem</strong><small>Community issue ka demo form</small></button>
+  <button class="tile" onclick="showPage('rights')"><span class="emoji">⚖️</span><strong>Know Your Rights</strong><small>Official legal information links</small></button>
+  <button class="tile" onclick="showPage('profile')"><span class="emoji">👤</span><strong>My Profile</strong><small>Prototype profile details</small></button>
+ </div>
+ <div class="notice"><b>Prototype notice:</b> Yeh installable-web-app package hai, lekin online hosting ke baad hi install prompt/offline cache kaam karega. Yeh abhi demo hai. Login, online database, real voting, report submission aur APK installation is file mein connected nahi hain. Community rules Bharat ke lagu kanoon se upar nahi hain.</div>
+</section>
+
+<section id="community" class="page">
+ <button class="back" onclick="showPage('home')">← Home</button><h2>👥 Community</h2>
+ <div class="card"><h3>Help India — Cockroach People</h3><p class="muted">Founder / Sthapna karne wale: <b>A.J Abdul Ansari</b></p><p class="muted">Maqsad: logon ko community ke through jodna, useful information share karna, civic issues par baat karna aur ek-doosre ki madad karna.</p></div>
+ <div class="card"><h3>Community values</h3><p class="muted">Respect • Honesty • Non-violence • Privacy • Fair participation</p><p class="muted">Members ki personal information bina permission share na karein. Dhamki, harassment ya illegal activity allowed nahi honi chahiye.</p></div>
+ <div class="card"><h3>Join community (demo)</h3><label class="label">Display name</label><input id="joinName" class="field" placeholder="Apna naam ya nickname"><label class="label">Aapka interest</label><select id="joinInterest" class="field"><option>Community help</option><option>Rights information</option><option>Rules and proposals</option><option>Learning and awareness</option></select><button class="btn" onclick="joinDemo()">Demo join</button><p id="joinResult" class="muted"></p></div>
+</section>
+
+<section id="rules" class="page">
+ <button class="back" onclick="showPage('home')">← Home</button><h2>📜 Our Rules</h2>
+ <div class="card"><h3>Starter community rules</h3><ol class="muted"><li>Har member se izzat se baat karein.</li><li>Jhoothi jaankari ko fact ki tarah na failayein.</li><li>Kisi ka phone number, address ya private details permission ke bina share na karein.</li><li>Dhamki, harassment, nafrat aur violence ko badhava na dein.</li><li>Rule proposal sabhi ko padhne aur samajhne ka mauka mile.</li><li>Community rules Bharat ke samvidhan aur lagu kanoon ke adheen honge.</li></ol></div>
+ <div class="card"><h3>Naya rule suggest karein</h3><label class="label">Rule ka title</label><input id="ruleTitle" class="field" placeholder="Chhota title"><label class="label">Rule ka detail</label><textarea id="ruleText" class="field" placeholder="Aap kya rule suggest karna chahte hain?"></textarea><button class="btn" onclick="submitRule()">Proposal save karein (is device par)</button></div>
+ <div id="ruleList"></div>
+</section>
+
+<section id="voting" class="page">
+ <button class="back" onclick="showPage('home')">← Home</button><h2>🗳️ Voting (demo)</h2>
+ <div class="card"><h3>Demo proposal: Monthly community meeting rakhein?</h3><p class="muted">Yeh sirf interface test karne ke liye sample proposal hai, official community vote nahi.</p><div class="row"><button class="btn" onclick="vote('yes')">👍 Support</button><button class="btn secondary" onclick="vote('no')">👎 Oppose</button></div><p id="voteResult" class="muted">Demo votes: 0 support • 0 oppose</p></div>
+ <div class="notice">Real voting ke liye verified accounts, one-member-one-vote rules, server-side validation, vote privacy aur transparent result process set up karna hoga.</div>
+</section>
+
+<section id="help" class="page">
+ <button class="back" onclick="showPage('home')">← Home</button><h2>🤝 Help People</h2>
+ <div class="card"><h3>Madad ki request (demo)</h3><label class="label">Kis tarah ki madad?</label><select id="helpType" class="field"><option>Study / learning</option><option>Food or essentials</option><option>Public service information</option><option>Other community help</option></select><label class="label">Details (private information mat likhein)</label><textarea id="helpDetails" class="field" placeholder="Samasya ko general tareeke se samjhayen"></textarea><button class="btn" onclick="submitHelp()">Demo request save karein</button></div><div id="helpList"></div>
+ <div class="notice">Yeh public emergency service nahi hai. Emergency mein local emergency services ya trusted adult/authority se sampark karein. Kisi stranger ko paise ya sensitive documents na bhejein.</div>
+</section>
+
+<section id="report" class="page">
+ <button class="back" onclick="showPage('home')">← Home</button><h2>📢 Report Problem</h2>
+ <div class="card"><h3>Community issue report (demo)</h3><label class="label">Issue category</label><select id="reportType" class="field"><option>Road / cleanliness</option><option>Public facility</option><option>Education information</option><option>Online community concern</option><option>Other</option></select><label class="label">Issue details</label><textarea id="reportDetails" class="field" placeholder="Issue describe karein. Phone number/address jaise personal data na likhein."></textarea><button class="btn" onclick="submitReport()">Demo report save karein</button></div><div id="reportList"></div>
+ <p class="muted">Is prototype se report kisi government department ko nahi jaati. Real submission ke liye verified official portal connect karna hoga.</p>
+</section>
+
+<section id="rights" class="page">
+ <button class="back" onclick="showPage('home')">← Home</button><h2>⚖️ Know Your Rights</h2>
+ <div class="card"><h3>Official information</h3><p class="muted">Bharat ke Samvidhan, kanoon aur government services ke liye official sources ko check karein.</p><p><a href="https://legislative.gov.in/constitution-of-india/" target="_blank" rel="noopener">Constitution of India — Legislative Department</a></p><p><a href="https://www.india.gov.in/" target="_blank" rel="noopener">National Portal of India</a></p><p><a href="https://nalsa.gov.in/" target="_blank" rel="noopener">NALSA — Legal Services</a></p></div>
+ <div class="notice">Yeh general information hai, legal advice nahi. Kisi legal matter mein qualified lawyer ya legal services authority se salah lein.</div>
+</section>
+
+<section id="profile" class="page">
+ <button class="back" onclick="showPage('home')">← Home</button><h2>👤 My Profile</h2>
+ <div class="card"><p class="muted">Founder / Sthapna karne wale</p><h3>A.J Abdul Ansari</h3><span class="pill">App Founder</span><p class="muted">App name: Help India — Cockroach People</p><p class="muted">Status: Prototype • Version 1</p></div>
+ <div class="card"><h3>Profile setup (demo)</h3><label class="label">Display name</label><input id="profileName" class="field" placeholder="Apna display name"><button class="btn" onclick="saveProfile()">Save on this device</button><p id="profileResult" class="muted"></p></div>
+ <div class="notice">Real mobile-number login ke liye OTP authentication service, privacy notice aur secure backend configure karna hoga. Is demo mein phone number collect nahi hota.</div>
+</section>
+<footer>Made for community learning • Founder: A.J Abdul Ansari</footer>
+</main>
+<nav>
+<button onclick="showPage('home')"><span>🏠</span>Home</button>
+<button onclick="showPage('community')"><span>👥</span>Community</button>
+<button onclick="showPage('rules')"><span>📜</span>Rules</button>
+<button onclick="showPage('help')"><span>🤝</span>Help</button>
+<button onclick="showPage('profile')"><span>👤</span>Profile</button>
+</nav>
+<script>
+const keys={rules:'hip_rules',helps:'hip_helps',reports:'hip_reports'};
+function showPage(id){document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));document.getElementById(id).classList.add('active');window.scrollTo(0,0)}
+function getList(k){try{return JSON.parse(localStorage.getItem(k)||'[]')}catch(e){return []}}
+function putList(k,v){localStorage.setItem(k,JSON.stringify(v))}
+function safe(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function renderList(k,id,empty){const a=getList(k);document.getElementById(id).innerHTML=a.length?a.slice().reverse().map(x=>`<div class="card"><h3>${safe(x.title)}</h3><p class="muted">${safe(x.body)}</p><span class="pill">${safe(x.date)}</span></div>`).join(''):`<div class="empty">${empty}</div>`}
+function submitRule(){let t=document.getElementById('ruleTitle').value.trim(),b=document.getElementById('ruleText').value.trim();if(!t||!b){alert('Title aur detail dono bharein.');return}let a=getList(keys.rules);a.push({title:t,body:b,date:new Date().toLocaleDateString('en-IN')+' • Proposal'});putList(keys.rules,a);document.getElementById('ruleTitle').value='';document.getElementById('ruleText').value='';renderList(keys.rules,'ruleList','Abhi koi proposal nahi.');alert('Proposal is device par save ho gaya. Yeh online publish nahi hua.')}
+function submitHelp(){let t=document.getElementById('helpType').value,b=document.getElementById('helpDetails').value.trim();if(!b){alert('Details likhein.');return}let a=getList(keys.helps);a.push({title:t,body:b,date:new Date().toLocaleDateString('en-IN')});putList(keys.helps,a);document.getElementById('helpDetails').value='';renderList(keys.helps,'helpList','Abhi koi demo request nahi.');alert('Demo request is device par save hui.')}
+function submitReport(){let t=document.getElementById('reportType').value,b=document.getElementById('reportDetails').value.trim();if(!b){alert('Issue details likhein.');return}let a=getList(keys.reports);a.push({title:t,body:b,date:new Date().toLocaleDateString('en-IN')});putList(keys.reports,a);document.getElementById('reportDetails').value='';renderList(keys.reports,'reportList','Abhi koi demo report nahi.');alert('Demo report is device par save hui; authority ko nahi bheji gayi.')}
+let yes=0,no=0;function vote(v){if(v==='yes')yes++;else no++;document.getElementById('voteResult').textContent=`Demo votes: ${yes} support • ${no} oppose (sirf is session mein)` }
+function joinDemo(){let n=document.getElementById('joinName').value.trim();if(!n){alert('Display name likhein.');return}document.getElementById('joinResult').textContent=`Thanks, ${n}! Demo mein aapka interest record hua. Real membership online register nahi hui.`}
+function saveProfile(){let n=document.getElementById('profileName').value.trim();if(!n){alert('Display name likhein.');return}localStorage.setItem('hip_profile_name',n);document.getElementById('profileResult').textContent='Saved on this device as: '+n}
+renderList(keys.rules,'ruleList','Abhi koi proposal nahi.');renderList(keys.helps,'helpList','Abhi koi demo request nahi.');renderList(keys.reports,'reportList','Abhi koi demo report nahi.');
+if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
+  window.addEventListener('load', () => navigator.serviceWorker.register('./service-worker.js').catch(() => {}));
+}
+</script>
+</body></html>
